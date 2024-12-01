@@ -1,0 +1,31 @@
+footer {
+    margin-top: 320px;
+
+}
+
+.outer-container {
+    margin-top: 56px;
+    display: flex;
+    padding: 20px;
+}
+
+.text-container {
+    flex: 2;
+    background-color: #454444;
+    border-radius: 10px;
+    weight: 100px;
+    padding-top: 50px;
+    padding-left: 30px;
+    font-size: 20px;
+    color: #ffffff; /* Texte visible sur fond gris */
+}
+
+.image-container {
+    flex: 1; /* Div de droite moins large */
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
