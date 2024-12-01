@@ -1,14 +1,14 @@
 <?php
-$host = "localhost";
-$bdd = "Students";
-$user = "root";
-$pwd = "ROOT";
+$host = 'mysql';
+$user = 'root';
+$mdp = 'ROOT';
+$dtb = 'students';
 
-try {
-    $connexion = new PDO("mysql:host=$host;dbname=$bdd", $user, $pwd);
-} catch (Exception $e) {
-    die("Erreur de connexion : " . $e->getMessage());
+
+$connect = mysqli_connect($host, $user, $mdp, $dtb);
+
+if ($connect->connect_error) {
+    die("unsucsseful connexion : " . $connect->connect_error);
 }
-
-echo "hello world";
+?>
 
