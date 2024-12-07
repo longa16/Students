@@ -1,3 +1,5 @@
+<link href="css/inscription.css" rel="stylesheet">
+
 <?php
 // Connexion à la base de données
 $host = "localhost";
@@ -70,7 +72,7 @@ try {
     $stmt = $connexion->query("SELECT * FROM etudiants");
 
     echo "<table border='1'>";
-    echo "<tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Email</th><th>Actions</th></tr>";
+    echo "<tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Date de naissance </th><th>Actions</th></tr>";
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>";
@@ -82,7 +84,7 @@ try {
                 <form method='post' style='display:inline;'>
                     <input type='hidden' name='operation' value='delete'>
                     <input type='hidden' name='id' value='" . htmlspecialchars($row['etu_id']) . "'>
-                    <button type='submit'>Supprimer</button>
+                    <button type='submit' class='rouge' >Supprimer</button>
                 </form>
                 <form method='post' action='update_form.php' style='display:inline;'>
                     <input type='hidden' name='id' value='" . htmlspecialchars($row['etu_id']) . "'>
@@ -179,7 +181,7 @@ try {
                 <form method='post' style='display:inline;'>
                     <input type='hidden' name='operation' value='supprimer'>
                     <input type='hidden' name='id' value='" . htmlspecialchars($row['cours_id']) . "'>
-                    <button type='submit'>Supprimer</button>
+                    <button type='submit' class='rouge'>Supprimer</button>
                 </form>
                 <form method='post' action='update_course_form.php' style='display:inline;'>
                     <input type='hidden' name='id' value='" . htmlspecialchars($row['cours_id']) . "'>
@@ -206,4 +208,6 @@ try {
     <input type="number" id="credits" name="credits" required>
     <button type="submit">Ajouter</button>
 </form>
+
+<a href="inscription.php"><button>Vers les notes</button></a>
 
