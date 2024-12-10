@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             $moyenne = $result['moyenne'];
-            echo "<p>La moyenne de l'étudiant est : " . ($moyenne ? number_format($moyenne, 2) : "Aucune note") . ".</p>";
+            echo "<p>La moyenne de l'étudiant est : " . ($moyenne ? number_format($moyenne, 2) : "Etudiant introuvable") . ".</p>";
         } catch (PDOException $e) {
             echo "<p>Erreur lors du calcul de la moyenne : " . $e->getMessage() . "</p>";
         }
@@ -67,27 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<h2>Inscrire un étudiant à un cours</h2>
-<form method="post">
-    <input type="hidden" name="operation" value="inscription">
-    <label for="etudiant_id">ID Étudiant :</label>
-    <input type="number" id="etudiant_id" name="etudiant_id" required>
-    <label for="cours_id">ID Cours :</label>
-    <input type="number" id="cours_id" name="cours_id" required>
-    <button type="submit">Inscrire</button>
-</form>
+<a href="inscriretudiant.php">inscrire un etudiant à un cours</a>
+<a href="ajouternote.php">Attribuer une note</a>
 
-<h2>Ajouter une note</h2>
-<form method="post">
-    <input type="hidden" name="operation" value="ajouter_note">
-    <label for="etudiant_id">ID Étudiant :</label>
-    <input type="number" id="etudiant_id" name="etudiant_id" required>
-    <label for="cours_id">ID Cours :</label>
-    <input type="number" id="cours_id" name="cours_id" required>
-    <label for="note">Note :</label>
-    <input type="number" step="0.01" id="note" name="note" required>
-    <button type="submit">Ajouter la note</button>
-</form>
 
 <h2>Calculer la moyenne</h2>
 <form method="post">

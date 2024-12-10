@@ -1,125 +1,129 @@
-/* Style global */
+/* inscription.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 0;
+    color: #343a40;
 }
 
 h2 {
+    color: #495057;
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 form {
-    background: #fff;
+    background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    max-width: 400px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
 }
 
-form label {
+label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: #495057;
 }
 
-form input,
-form button {
-    width: calc(100% - 12px);
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
-form button {
+button {
     background-color: #007bff;
-    color: white;
+    color: #fff;
+    padding: 12px 20px;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-form button:hover {
+button.rouge {
+    background-color: #dc3545;
+}
+
+button:hover {
     background-color: #0056b3;
 }
 
-form input:focus {
-    border-color: #000000;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+button.rouge:hover {
+    background-color: #c82333;
 }
 
-/* Table styles */
 table {
-    width: 100%;
-    margin: 20px 0;
+    width: 70%;
     border-collapse: collapse;
-    background: white;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-left: 50px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 table th,
 table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    color: #333;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
 }
 
 table th {
-    background-color: #000000;
-    color: white;
-    font-weight: bold;
+    background-color: #323232;
+    color: #fff;
+    text-align: center;
 }
 
 table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
 }
 
 table tr:hover {
-    background-color: #f1f1f1;
+    background-color: #e9ecef;
 }
 
-.rouge {
-
-    background-color: red;
-} 
-
-/* Message box */
-p {
-    text-align: center;
+a {
+    display: inline-block;
     margin-top: 20px;
-    padding: 10px;
-    color: #007bff;
-    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: #343a40;
 }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    form {
-        padding: 15px;
-        margin: 10px auto;
-    }
-
-    table {
-        font-size: 14px;
-    }
-
-    form input,
-    form button {
-        font-size: 12px;
-    }
+a button {
+    background-color: #585656;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
+a button:hover {
+    background-color: rgb(205, 202, 202);
+}
+
+img{
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}

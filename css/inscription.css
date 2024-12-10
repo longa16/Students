@@ -42,19 +42,33 @@ form button {
 }
 
 form button {
-    background-color: #007bff;
+    background-color: #585656;
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+button {
+
+    background-color: #585656;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover{
+    background-color: #383636;
+}
+
 form button:hover {
-    background-color: #0056b3;
+    background-color: #383636;
 }
 
 form input:focus {
-    border-color: #007bff;
+    border-color: #585656;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
@@ -79,7 +93,7 @@ table td {
 }
 
 table th {
-    background-color: #007bff;
+    background-color: #585656;
     color: white;
     font-weight: bold;
 }

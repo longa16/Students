@@ -1,3 +1,6 @@
+<link href="css/update_form.css" rel="stylesheet">
+
+
 <?php
 // Connexion à la base de données
 $host = "localhost";

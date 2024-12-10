@@ -1,6 +1,7 @@
-<link href="css/inscription.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
 
 <?php
+
 // Connexion à la base de données
 $host = "localhost";
 $bdd = "students";
@@ -67,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+
 // Afficher tous les étudiants
 try {
     $stmt = $connexion->query("SELECT * FROM etudiants");
@@ -102,17 +104,8 @@ try {
 // Formulaire pour ajouter un étudiant
 ?>
 
-<h2>Ajouter un étudiant</h2>
-<form method="post">
-    <input type="hidden" name="operation" value="create">
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required>
-    <label for="prenom">Prénom :</label>
-    <input type="text" id="prenom" name="prenom" required>
-    <label for="date_naissance">date_naissance :</label>
-    <input type="date" id="date_naissance" name="date_naissance" required>
-    <button type="submit">Ajouter</button>
-</form>
+<a href="ajoutetudiant.php"><button><img src="public/assets/ajouter-un-utilisateur.png" alt="utilsateur">Ajouter un etudiant</button> </a>
+
 
 
 <?php
@@ -196,18 +189,9 @@ try {
     echo "<p>Erreur lors de la récupération des cours : " . $e->getMessage() . "</p>";
 }
 
-// Formulaire pour ajouter un cours
 ?>
 
-<h2>Ajouter un cours</h2>
-<form method="post">
-    <input type="hidden" name="operation" value="creation">
-    <label for="intitule">Intitulé :</label>
-    <input type="text" id="intitule" name="intitule" required>
-    <label for="credits">Crédits :</label>
-    <input type="number" id="credits" name="credits" required>
-    <button type="submit">Ajouter</button>
-</form>
+<a href="ajoutcours.php"><button><img src="public/assets/ajouter-le-fichier.png" alt="utilsateur">un nouveau cours</button> </a>
+
 
 <a href="inscription.php"><button>Vers les notes</button></a>
-
