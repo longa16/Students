@@ -1,8 +1,8 @@
 <?php
-$host = 'mysql';
-$user = 'root';
-$mdp = 'ROOT';
-$dtb = 'students';
+$host = "database-1.ctowamwq4uaz.eu-north-1.rds.amazonaws.com";
+$bdd = "Student";
+$user = "admin";
+$pwd = "admin#root123";
 
 
 $connect = mysqli_connect($host, $user, $mdp, $dtb);
