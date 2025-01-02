@@ -2,10 +2,10 @@
 
 <?php
 // Connexion à la base de données
-$host = "database-1.ctowamwq4uaz.eu-north-1.rds.amazonaws.com";
-$bdd = "Student";
-$user = "admin";
-$pwd = "admin#root123";
+$host = "localhost";
+$bdd = "students";
+$user = "root";
+$pwd = "ROOT";
 
 try {
     $connexion = new PDO("mysql:host=$host;dbname=$bdd", $user, $pwd);
